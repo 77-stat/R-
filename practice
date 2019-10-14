@@ -1,0 +1,19 @@
+#1
+x=matrix(1:81,nrow=9,ncol=9)
+ for (i in 1:9){
+     for(j in 1:9){
+         x[i,j]=i*j
+     }
+ }
+ x
+
+#2
+var=function(y){
+     x=0
+     for(i in 1:length(y)){
+         x=x+(y[i]-mean(y))**2
+     }
+     x=x/(length(y)-1)
+     return(x)
+ }
+ var(1:10)
